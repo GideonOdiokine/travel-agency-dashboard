@@ -2,12 +2,12 @@ import { cn } from 'lib/utils'
 import { Link, NavLink } from 'react-router'
 import { sidebarItems } from '~/constants'
 
-const NavItems = () => {
+const NavItems = ({ handleClick }: { handleClick?: () => void }) => {
 
-    const user ={
-        name:"Gideon",
-        email:"gideonodiokine@gmail.com",
-        imageUrl:"/assets/images/david.webp"
+    const user = {
+        name: "Gideon",
+        email: "gideonodiokine@gmail.com",
+        imageUrl: "/assets/images/david.webp"
     }
 
     return (
@@ -23,7 +23,9 @@ const NavItems = () => {
                             {({ isActive }: { isActive: boolean }) => (
                                 <div className={cn('group nav-item', {
                                     'bg-primary-100 !text-white': isActive
-                                })}>
+                                })}
+                                onClick={handleClick}
+                                >
                                     <img
                                         src={icon}
                                         alt={label}
@@ -38,13 +40,13 @@ const NavItems = () => {
                 <footer className='nav-footer'>
                     <img src={user?.imageUrl || '/assets/images/david.webp'} alt={user.name || 'Gideon'} />
                     <article>
-                       <h2> {user?.name || 'Gideon'}</h2>
-                       <p>{user?.email}</p>
+                        <h2> {user?.name || 'Gideon'}</h2>
+                        <p>{user?.email}</p>
                     </article>
-                    <button onClick={()=>{
+                    <button onClick={() => {
                         console.log('logout')
                     }}
-                    className='cursor-pointer'
+                        className='cursor-pointer'
                     >
                         <img src='/assets/icons/logout.svg' alt='logout' className='size-6' />
                     </button>
