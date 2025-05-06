@@ -1,4 +1,5 @@
 import type { AxisModel } from "@syncfusion/ej2-react-charts";
+import { formatDate } from 'lib/utils';
 
 export const sidebarItems = [
   {
@@ -192,3 +193,34 @@ export const allTrips = [{
     estimatedPrice: "$4,000",
   },
   ];
+
+
+export const users = [
+  {
+    id: 1,
+    name: "John Doe",
+    email: "johndoe@mail.com",
+    imageUrl: "/assets/images/david.webp",
+    status: "user",
+    itineraryCreated: 4,
+    dateJoined: formatDate("2023-01-15"),
+  },
+  {
+    id: 1,
+    name: "Gideon Doe",
+    email: "samrtodioks@mail.com",
+    imageUrl: "/assets/images/david.webp",
+    status: "admin",
+    itineraryCreated: 4,
+    dateJoined: formatDate("2023-01-15"),
+  },
+  {
+    id: 1,
+    name: "Okon Doe",
+    email: "okobasse@mail.com",
+    imageUrl: "/assets/images/david.webp",
+    status: "user",
+    itineraryCreated: 4,
+    dateJoined: formatDate("2023-01-15"),
+  },
+]
