@@ -102,6 +102,7 @@ export const action = async ({ request }: ActionFunctionArgs) => {
         //     result.$id
         // )
 
+
         // await database.updateDocument(
         //     appwriteConfig.databaseId,
         //     appwriteConfig.tripCollectionId,
